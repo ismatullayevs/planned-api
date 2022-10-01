@@ -23,6 +23,7 @@ urlpatterns = [
     path('rest-api/', include('rest_framework.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
+    path('auth/', include('djoser.social.urls')),
     path('api/', include('core.urls')),
 ]
 
