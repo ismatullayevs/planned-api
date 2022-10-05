@@ -30,7 +30,6 @@ class TodoDetailAPIView(RetrieveUpdateDestroyAPIView):
     serializer_class = TodoSerializer
     permission_classes = [IsAuthenticated]
 
-
     def get_queryset(self):
         return Todo.objects.filter(user=self.request.user)
 
@@ -42,7 +41,7 @@ def reorder(request, pk):
         current = queryset.get(pk=pk)
     except Todo.DoesNotExist:
         raise Http404
-        
+
     direction = request.GET.get('direction')
     count = int(request.GET.get('count'))
 
@@ -52,5 +51,5 @@ def reorder(request, pk):
     elif direction == "down":
         for i in range(count):
             current.down();
-    
+
     return Response(status=status.HTTP_204_NO_CONTENT)
