@@ -8,8 +8,8 @@ from imagekit.processors import ResizeToFill
 
 class CustomUser(AbstractUser):
     username = None
-    email = models.EmailField(_('email address'), unique=True)
-    avatar = models.ImageField(upload_to='avatars', blank=True, null=True)
+    email = models.EmailField(_('Email address'), unique=True)
+    avatar = models.ImageField(_('Profile picture'), upload_to='avatars', blank=True, null=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []

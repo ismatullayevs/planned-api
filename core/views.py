@@ -33,3 +33,24 @@ class TodoDetailAPIView(RetrieveUpdateDestroyAPIView):
 
     def get_queryset(self):
         return Todo.objects.filter(user=self.request.user)
+
+
+@api_view(['PATCH'])
+def reorder(request, pk):
+    queryset = request.user.todos.all()
+    try:
+        current = queryset.get(pk=pk)
+    except Todo.DoesNotExist:
+        raise Http404
+        
+    direction = request.GET.get('direction')
+    count = int(request.GET.get('count'))
+
+    if direction == "up":
+        for i in range(count):
+            current.up()
+    elif direction == "down":
+        for i in range(count):
+            current.down();
+    
+    return Response(status=status.HTTP_204_NO_CONTENT)
