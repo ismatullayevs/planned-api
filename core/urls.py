@@ -1,4 +1,3 @@
-from turtle import clear
 from django.urls import path
 from .views import TodoListAPIView, TodoDetailAPIView, reorder
 from users.views import UserDetailAPIView
