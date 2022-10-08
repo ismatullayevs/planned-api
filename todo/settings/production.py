@@ -7,7 +7,7 @@ DATABASES['default'].update(db_from_env)
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['todo.rockyou.uz', 'www.rockyou.uz']
+ALLOWED_HOSTS = ['ismatullayevs-todo.herokuapp.com']
 
 SECURE_BROWSER_XSS_FILTER = True
 X_FRAME_OPTIONS = 'DENY'
