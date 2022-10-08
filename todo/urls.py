@@ -20,11 +20,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('rest-api/', include('rest_framework.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
     path('auth/', include('djoser.social.urls')),
-    path('api/', include('core.urls')),
+    path('core/', include('core.urls')),
 ]
 
 if settings.DEBUG:
