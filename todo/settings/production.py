@@ -1,13 +1,9 @@
 from .base import *
-import dj_database_url
-
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
 
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['ismatullayevs-todo.herokuapp.com']
+ALLOWED_HOSTS = ['todo.rockyou.uz']
 
 SECURE_BROWSER_XSS_FILTER = True
 X_FRAME_OPTIONS = 'DENY'
