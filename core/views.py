@@ -42,14 +42,13 @@ def reorder(request, pk):
     except Todo.DoesNotExist:
         raise Http404
 
-    direction = request.GET.get('direction')
     count = int(request.GET.get('count'))
 
-    if direction == "up":
+    if count > 0:
         for i in range(count):
             current.up()
-    elif direction == "down":
-        for i in range(count):
-            current.down();
+    else:
+        for i in range(abs(count)):
+            current.down()
 
     return Response(status=status.HTTP_204_NO_CONTENT)

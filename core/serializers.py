@@ -6,4 +6,4 @@ class TodoSerializer(serializers.ModelSerializer):
     order = serializers.IntegerField(read_only=True)
     class Meta:
         model = Todo
-        fields = ("id", "task", "completed", "created_at", "modified_at", 'order')
+        fields = ("id", "uid", "task", "completed", "created_at", 'order')
