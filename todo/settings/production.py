@@ -3,7 +3,10 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['ismatullayevs.github.io']
+ALLOWED_HOSTS = [
+    'ismatullayevs.github.io',
+    'planned-api-production.up.railway.app'
+]
 
 SECURE_BROWSER_XSS_FILTER = True
 X_FRAME_OPTIONS = 'DENY'

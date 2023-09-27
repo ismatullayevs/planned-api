@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn todo.wsgi
+web: python manage.py collectstatic && python manage.py migrate && gunicorn todo.wsgi
