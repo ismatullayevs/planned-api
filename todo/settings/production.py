@@ -5,6 +5,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'ismatullayevs.github.io',
+    'planned.javohir.me',
     'planned-api-production.up.railway.app'
 ]
 
