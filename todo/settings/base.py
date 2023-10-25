@@ -194,7 +194,7 @@ DJOSER = {
     'USERNAME_CHANGED_EMAIL_CONFIRMATION': True,
     'PASSWORD_CHANGED_EMAIL_CONFIRMATION': True,
     'SOCIAL_AUTH_TOKEN_STRATEGY': 'djoser.social.token.jwt.TokenStrategy',
-    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': ['https://planned.javohir.me', 'http://localhost:3000/planned/login'],
+    'SOCIAL_AUTH_ALLOWED_REDIRECT_URIS': ['https://planned.javohir.me/login', 'http://localhost:3000/planned/login'],
 }
 
 
